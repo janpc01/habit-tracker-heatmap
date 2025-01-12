@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Heat Map Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/cal-heatmap/dist/cal-heatmap.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Habit Heat Map Tracker</h1>
+        
+        <div class="add-habit-form">
+            <input type="text" id="habitInput" placeholder="Enter new habit...">
+            <button onclick="addHabit()">Add Habit</button>
+        </div>
+
+        <div id="habits-container">
+            <!-- Habits will be added here dynamically -->
+        </div>
+    </div>
+
+    <div id="logModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Log Habit</h2>
+            <div class="modal-form">
+                <input type="date" id="logDate">
+                <input type="number" id="logValue" min="0" max="5" placeholder="Value (0-5)">
+                <button id="submitLog">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/cal-heatmap/dist/cal-heatmap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
