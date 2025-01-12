@@ -91,8 +91,9 @@ class HabitTracker {
                 parseInt(dateStr);
             
             if (!isNaN(timestamp)) {
+                const date = new Date(timestamp * 1000).toISOString().split('T')[0];
                 formattedData.push({
-                    date: timestamp,
+                    date: date,
                     value: parseInt(value)
                 });
             }
